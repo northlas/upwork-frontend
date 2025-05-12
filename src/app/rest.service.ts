@@ -12,6 +12,6 @@ export class RestService {
   constructor(private httpClient: HttpClient) { }
 
   public postParapharse(text: string): Observable<HttpResponse<string>> {
-    return this.httpClient.post<HttpResponse<string>>(this.apiUrl + 'paraphrase', text);
+    return this.httpClient.post<HttpResponse<string>>(this.apiUrl + 'generate', text);
   }
 }
