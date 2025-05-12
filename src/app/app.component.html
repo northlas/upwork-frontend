@@ -1,23 +1,25 @@
-<mat-toolbar>
-  <button mat-icon-button class="border-0 me-2">
-    <mat-icon>face_2</mat-icon>
-  </button>
-  <span>Text Playground</span>
-</mat-toolbar>
-<div class="p-5">
-  <h1>Welcome to Text Playground!</h1>
-  <p>Enter your text content in the editor below and explore all the generative text AI features by pressing the button.</p>
-  <mat-card class="mt-3">
-    <mat-card-content class="">
-      <textarea class="w-100" rows="50" (select)="onSelect($event)" (mouseup)="showContext($event)"></textarea>
-    </mat-card-content>
-  </mat-card>
-</div>
+<div (mouseup)="showContext($event)">
+  <mat-toolbar>
+    <button mat-icon-button class="border-0 me-2">
+      <mat-icon>face_2</mat-icon>
+    </button>
+    <span>Text Playground</span>
+  </mat-toolbar>
+  <div class="p-5">
+    <h1>Welcome to Text Playground!</h1>
+    <p>Enter your text content in the editor below and explore all the generative text AI features by pressing the button.</p>
+    <mat-card class="mt-3">
+      <mat-card-content class="">
+        <textarea class="w-100" rows="50" (select)="onSelect($event)"></textarea>
+      </mat-card-content>
+    </mat-card>
+  </div>
 
-<div #popover style="position: absolute; display: none;">
-  <mat-card>
-    <mat-card-content>
-      <button mat-button color="primary" class="border border-secondary" (click)="onParaphrase()">Paraphrase</button>
-    </mat-card-content>
-  </mat-card>
+  <div #popover style="position: absolute; display: none;">
+    <mat-card>
+      <mat-card-content>
+        <button mat-button color="primary" class="border border-secondary" (click)="onParaphrase()">Paraphrase</button>
+      </mat-card-content>
+    </mat-card>
+  </div>
 </div>
