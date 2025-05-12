@@ -1,3 +1,3 @@
 export const environment = {
-  apiUrl: 'localhost:8000/'
+  apiUrl: 'https://upwork-backend-imix.shuttle.app/'
 };
