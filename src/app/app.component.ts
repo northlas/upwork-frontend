@@ -40,8 +40,9 @@ export class AppComponent {
   public onParaphrase() {
     let value = this.selectEvent.value.substring(this.selectEvent.selectionStart, this.selectEvent.selectionEnd);
     this.restService.postParapharse(value).subscribe({
-      next: (response: HttpResponse<String>) => {
-        this.selectEvent.value = this.selectEvent.value.substring(0, this.selectEvent.selectionStart) + response.body + this.selectEvent.value.substring(this.selectEvent.selectionEnd);
+      next: (response: String) => {
+        console.log(response)
+        this.selectEvent.value = this.selectEvent.value.substring(0, this.selectEvent.selectionStart) + response + this.selectEvent.value.substring(this.selectEvent.selectionEnd);
       },
       error: (error) => {
         console.error('Error:', error);
