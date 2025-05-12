@@ -6,7 +6,6 @@ import { MatCardModule } from '@angular/material/card';
 import { NgbPopoverModule } from '@ng-bootstrap/ng-bootstrap';
 import { MatButtonModule } from '@angular/material/button';
 import { RestService } from './rest.service';
-import { HttpResponse } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
